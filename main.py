@@ -257,10 +257,9 @@ class MainWindow(QMainWindow):
             button = QPushButton(text)
             button.setStyleSheet(button_style)
             button.setFixedSize(120, 40) 
-            button.clicked.connect(lambda checked, name=text: self.on_button_click(name))
+            button.clicked.connect(lambda _, b=text: print(b))
             bottom_layout.addWidget(button) 
-        def on_button_click(self, button_name):
-         print(button_name)
+        
         
         bottom_section.setLayout(bottom_layout)
 
