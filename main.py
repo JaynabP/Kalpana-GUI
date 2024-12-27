@@ -274,7 +274,6 @@ class MainWindow(QMainWindow):
         self.timer.start(1000)
 
     def update_graphs(self):
-        """Update the graphs with data."""
         if not self.data.empty and self.data_index < len(self.data):
             try:
                 self.time_data.append(self.data_index)
